@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1C13E2761CD480D6003B9983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E2751CD480D6003B9983 /* AppDelegate.swift */; };
-		1C13E2781CD480D6003B9983 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E2771CD480D6003B9983 /* ViewController.swift */; };
+		1C13E2781CD480D6003B9983 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E2771CD480D6003B9983 /* ListViewController.swift */; };
 		1C13E27B1CD480D6003B9983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C13E2791CD480D6003B9983 /* Main.storyboard */; };
 		1C13E27D1CD480D6003B9983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C13E27C1CD480D6003B9983 /* Assets.xcassets */; };
 		1C13E2801CD480D6003B9983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C13E27E1CD480D6003B9983 /* LaunchScreen.storyboard */; };
 		1C13E28B1CD480D6003B9983 /* Week4AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E28A1CD480D6003B9983 /* Week4AssignmentTests.swift */; };
 		1C13E2961CD480D6003B9983 /* Week4AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E2951CD480D6003B9983 /* Week4AssignmentUITests.swift */; };
+		1CE19C201CD4BD5600BF9591 /* ArrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE19C1F1CD4BD5600BF9591 /* ArrayTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		1C13E2721CD480D5003B9983 /* Week4Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week4Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C13E2751CD480D6003B9983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C13E2771CD480D6003B9983 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C13E2771CD480D6003B9983 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1C13E27A1CD480D6003B9983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C13E27C1CD480D6003B9983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C13E27F1CD480D6003B9983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		1C13E2911CD480D6003B9983 /* Week4AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Week4AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C13E2951CD480D6003B9983 /* Week4AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4AssignmentUITests.swift; sourceTree = "<group>"; };
 		1C13E2971CD480D6003B9983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CE19C1F1CD4BD5600BF9591 /* ArrayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				1C13E2751CD480D6003B9983 /* AppDelegate.swift */,
-				1C13E2771CD480D6003B9983 /* ViewController.swift */,
+				1CE19C211CD4BD5C00BF9591 /* Source */,
 				1C13E2791CD480D6003B9983 /* Main.storyboard */,
 				1C13E27C1CD480D6003B9983 /* Assets.xcassets */,
 				1C13E27E1CD480D6003B9983 /* LaunchScreen.storyboard */,
@@ -125,6 +127,15 @@
 			path = Week4AssignmentUITests;
 			sourceTree = "<group>";
 		};
+		1CE19C211CD4BD5C00BF9591 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1C13E2771CD480D6003B9983 /* ListViewController.swift */,
+				1CE19C1F1CD4BD5600BF9591 /* ArrayTableViewCell.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +146,7 @@
 				1C13E26E1CD480D5003B9983 /* Sources */,
 				1C13E26F1CD480D5003B9983 /* Frameworks */,
 				1C13E2701CD480D5003B9983 /* Resources */,
+				1CE19C1E1CD4BD2100BF9591 /* swiftlint */,
 			);
 			buildRules = (
 			);
@@ -254,12 +266,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CE19C1E1CD4BD2100BF9591 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1C13E26E1CD480D5003B9983 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C13E2781CD480D6003B9983 /* ViewController.swift in Sources */,
+				1CE19C201CD4BD5600BF9591 /* ArrayTableViewCell.swift in Sources */,
+				1C13E2781CD480D6003B9983 /* ListViewController.swift in Sources */,
 				1C13E2761CD480D6003B9983 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +517,7 @@
 				1C13E29C1CD480D6003B9983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C13E29D1CD480D6003B9983 /* Build configuration list for PBXNativeTarget "Week4AssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +526,7 @@
 				1C13E29F1CD480D6003B9983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C13E2A01CD480D6003B9983 /* Build configuration list for PBXNativeTarget "Week4AssignmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +535,7 @@
 				1C13E2A21CD480D6003B9983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
