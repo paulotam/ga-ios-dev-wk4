@@ -24,7 +24,21 @@ UITableViewDelegate, UITextFieldDelegate {
 //    listTable.delegate = self
 //    listTable.dataSource = self
 //    textField.delegate = self
-    addItem("Lettuce")
+//    addItem("Lettuce")
+
+    NSNotificationCenter.defaultCenter(
+      ).addObserver(
+        self,
+        selector: #selector(ListViewController.turnBlue),
+        name: UIKeyboardWillShowNotification,
+        object: nil)
+    NSNotificationCenter.defaultCenter(
+      ).addObserver(
+        self,
+        selector: #selector(ListViewController.turnRed),
+        name: UIKeyboardWillHideNotification,
+        object: nil)
+
   }
 
   override func didReceiveMemoryWarning() {
@@ -39,6 +53,16 @@ UITableViewDelegate, UITextFieldDelegate {
     textField.resignFirstResponder()
     textField.text = ""
     return true
+  }
+
+  func turnBlue() {
+    textField.backgroundColor = UIColor.blueColor()
+    textField.textColor = UIColor.whiteColor()
+  }
+
+  func turnRed() {
+    textField.backgroundColor = UIColor.redColor()
+    textField.textColor = UIColor.blackColor()
   }
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -26,6 +26,19 @@ UITableViewDelegate, UITextFieldDelegate {
     //    listTable.dataSource = self
     //    textField.delegate = self
     dataMap = [[String:String]]()
+
+    NSNotificationCenter.defaultCenter(
+      ).addObserver(
+        self,
+        selector: #selector(PairViewController.turnBlue),
+        name: UIKeyboardWillShowNotification,
+        object: nil)
+    NSNotificationCenter.defaultCenter(
+      ).addObserver(
+        self,
+        selector: #selector(PairViewController.turnRed),
+        name: UIKeyboardWillHideNotification,
+        object: nil)
   }
 
   override func didReceiveMemoryWarning() {
@@ -40,11 +53,26 @@ UITableViewDelegate, UITextFieldDelegate {
     guard keyField.text!.characters.count > 0 else { return true }
     guard valueField.text!.characters.count > 0 else { return true }
 
-    addItem(keyField.text!, newValue: valueField.text!)
     textField.resignFirstResponder()
+
+    addItem(keyField.text!, newValue: valueField.text!)
     keyField.text = ""
     valueField.text = ""
     return true
+  }
+
+  func turnBlue() {
+    keyField.backgroundColor = UIColor.blueColor()
+    keyField.textColor = UIColor.whiteColor()
+    valueField.backgroundColor = UIColor.blueColor()
+    valueField.textColor = UIColor.whiteColor()
+  }
+
+  func turnRed() {
+    keyField.backgroundColor = UIColor.redColor()
+    keyField.textColor = UIColor.blackColor()
+    valueField.backgroundColor = UIColor.redColor()
+    valueField.textColor = UIColor.blackColor()
   }
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
