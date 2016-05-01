@@ -15,6 +15,8 @@
 		1C13E28B1CD480D6003B9983 /* Week4AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E28A1CD480D6003B9983 /* Week4AssignmentTests.swift */; };
 		1C13E2961CD480D6003B9983 /* Week4AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13E2951CD480D6003B9983 /* Week4AssignmentUITests.swift */; };
 		1CE19C201CD4BD5600BF9591 /* ArrayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE19C1F1CD4BD5600BF9591 /* ArrayTableViewCell.swift */; };
+		1CE19C251CD5D52000BF9591 /* PairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE19C241CD5D52000BF9591 /* PairViewController.swift */; };
+		1CE19C271CD5D6EF00BF9591 /* PairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE19C261CD5D6EF00BF9591 /* PairTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1C13E2951CD480D6003B9983 /* Week4AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week4AssignmentUITests.swift; sourceTree = "<group>"; };
 		1C13E2971CD480D6003B9983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CE19C1F1CD4BD5600BF9591 /* ArrayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewCell.swift; sourceTree = "<group>"; };
+		1CE19C241CD5D52000BF9591 /* PairViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairViewController.swift; sourceTree = "<group>"; };
+		1CE19C261CD5D6EF00BF9591 /* PairTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 			children = (
 				1C13E2771CD480D6003B9983 /* ListViewController.swift */,
 				1CE19C1F1CD4BD5600BF9591 /* ArrayTableViewCell.swift */,
+				1CE19C241CD5D52000BF9591 /* PairViewController.swift */,
+				1CE19C261CD5D6EF00BF9591 /* PairTableViewCell.swift */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -288,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE19C271CD5D6EF00BF9591 /* PairTableViewCell.swift in Sources */,
 				1CE19C201CD4BD5600BF9591 /* ArrayTableViewCell.swift in Sources */,
 				1C13E2781CD480D6003B9983 /* ListViewController.swift in Sources */,
+				1CE19C251CD5D52000BF9591 /* PairViewController.swift in Sources */,
 				1C13E2761CD480D6003B9983 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

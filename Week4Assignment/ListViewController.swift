@@ -65,7 +65,7 @@ UITableViewDelegate, UITextFieldDelegate {
   }
 
   func addItem (value: String) {
-    print("addItem")
+//    print("addItem")
     defaultList.append(value)
     listTable.reloadData()
   }
